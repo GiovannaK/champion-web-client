@@ -8,6 +8,7 @@ type ButtonProps = {
   fontWeight: number;
   isUppercase?: boolean;
   width?: string;
+  height?: string;
 };
 export const Button = styled(MuiButton)<ButtonProps>`
   font-size: ${(props) => props.theme.spacing(props.buttonSize)};
@@ -15,4 +16,5 @@ export const Button = styled(MuiButton)<ButtonProps>`
   background: ${(props) => props.theme.palette[props.buttonColor.palette][props.buttonColor.hierarchy]};
   text-transform: ${(props) => (props.isUppercase ? "uppercase" : "none")};
   width: ${(props) => props.width};
+  height: ${(props) => props.height};
 `;

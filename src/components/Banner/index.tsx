@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 import { Box, Grid, Hidden, Toolbar, Typography } from "@mui/material";
 import React from "react";
-import { ButtonLG } from "../Buttons/ButtonLG";
+import { Button } from "../Buttons/Button";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export const Banner = () => {
@@ -40,18 +40,19 @@ export const Banner = () => {
                     transform: "translate(-50%, -50%)",
                   }}
                 >
-                  Apoie criadores e Acesse os melhores conteúdos
+                  Apoie criadores e acesse os melhores conteúdos
                 </Typography>
               </Grid>
               <Toolbar sx={{ paddingTop: "15rem" }} />
               <Grid item xs={12}>
-                <ButtonLG
+                <Button
                   text="Apoie Já"
                   variant="contained"
                   width={"30%"}
                   fontWeight={800}
                   isUppercase={true}
                   isEndIcon={true}
+                  size={2}
                   icon={<ArrowForwardIosIcon />}
                 />
               </Grid>

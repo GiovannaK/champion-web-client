@@ -1,38 +1,43 @@
 import React from "react";
-import { Button } from "../styles";
+import * as S from "../styles";
 
-type ButtonLGProps = {
+type ButtonProps = {
   text: string;
   variant: "text" | "outlined" | "contained";
+  size: number;
   width?: string;
   fontWeight?: number;
   isUppercase?: boolean;
   icon?: React.ReactNode;
   isEndIcon?: boolean;
+  height?: string;
 };
 
-export const ButtonLG = ({
+export const Button = ({
   text,
   variant,
   width,
   fontWeight,
   isUppercase,
   isEndIcon,
-  icon
-}: ButtonLGProps) => {
+  icon,
+  height,
+  size
+}: ButtonProps) => {
   const buttonColor = { palette: "primary", hierarchy: "main" };
   const iconPosition = isEndIcon ? "endIcon" : "startIcon";
   return (
-    <Button
+    <S.Button
       buttonSize={2}
       fontWeight={fontWeight ?? 500}
       buttonColor={buttonColor}
       variant={variant}
       width={width}
+      height={height}
       isUppercase={isUppercase}
       {...{ [iconPosition]: icon }}
     >
       {text}
-    </Button>
+    </S.Button>
   );
 };
