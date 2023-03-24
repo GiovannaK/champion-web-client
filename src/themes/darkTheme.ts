@@ -12,17 +12,54 @@ export const openSans = Open_Sans({
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#556cd6",
+      main: "#6A7DE4",
+      light: "#FFBF1C",
+      dark: "#4D194D",
+      "100": "#4CC9F0",
     },
     secondary: {
       main: "#19857b",
+      light: "#E7760E",
+      dark: "#525252",
     },
     error: {
       main: red.A400,
     },
+    text: {
+      primary: "#F0F0F0",
+      secondary: "#0F0F0F",
+    },
   },
   typography: {
     fontFamily: openSans.style.fontFamily,
+    h1: {
+      fontSize: "3.5rem",
+    },
+    h2: {
+      fontSize: "2.5rem",
+    },
+    h3: {
+      fontSize: "2rem",
+    },
+    h4: {
+      fontSize: "1.5rem",
+    },
+    h5: {
+      fontSize: "1.25rem",
+    },
+    h6: {
+      fontSize: "1rem",
+    },
+    body1: {
+      fontSize: "1.25rem",
+    },
+    body2: {
+      fontSize: "1rem",
+    },
+    subtitle1: {
+      fontSize: "2rem",
+      fontWeight: 900,
+    },
   },
 });
 

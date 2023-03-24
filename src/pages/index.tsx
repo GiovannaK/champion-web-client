@@ -1,4 +1,5 @@
 import { Button } from "@mui/material";
+import { Banner } from "../components/Banner";
 import { PaperComponent } from "../components/CustomPaper";
 import { Layout } from "../components/Layout";
 import { Topbar } from "../components/Topbar";
@@ -8,7 +9,7 @@ export default function Home() {
     <PaperComponent>
       <Topbar />
       <Layout title="Champion | Apoie artistas">
-
+        <Banner />
       </Layout>
     </PaperComponent>
   );
