@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-no-duplicate-props */
-import { Box, Grid, Hidden, Toolbar, Typography } from "@mui/material";
+import { Box, Grid, Hidden, Typography } from "@mui/material";
+import * as S from "./styles";
 import React from "react";
 import { Button } from "../Buttons/Button";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -43,7 +44,7 @@ export const Banner = () => {
                   Apoie criadores e acesse os melhores conteúdos
                 </Typography>
               </Grid>
-              <Toolbar sx={{ paddingTop: "15rem" }} />
+              <S.Toolbar />
               <Grid item xs={12}>
                 <Button
                   text="Apoie Já"

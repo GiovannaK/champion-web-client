@@ -22,6 +22,10 @@ const theme = createTheme({
       light: "#E7760E",
       dark: "#525252",
     },
+    background: {
+      default: "linear-gradient(to right, #203A43, #203A43, #0F2027);",
+      paper: "#0F2027",
+    },
     error: {
       main: red.A400,
     },
