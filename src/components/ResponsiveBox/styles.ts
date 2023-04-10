@@ -1,7 +1,7 @@
 import { styled } from "@lib/styled";
-import { Typography as MuiTypography } from "@mui/material";
+import { Box as MuiBox } from "@mui/system";
 
-export const Typography = styled(MuiTypography)`
+export const Box = styled(MuiBox)`
   ${(props) => props.theme.breakpoints.up("md")} {
     font-size: ${(props) => props.theme.spacing(3)};
   };

@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box, Card, Grid } from "@mui/material";
 import React from "react";
+import { Typography } from "./styles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { categories } from "../../utils/categories";
 
 export const Categories = () => {
   return (
-    <Box mt={20}>
+    <Box mt={15} sx={{ position: "relative", textAlign: "center" }}>
       <Grid
         container
         direction={"row"}
@@ -38,7 +39,23 @@ export const Categories = () => {
           >
             {categories.map((category) => (
               <SwiperSlide key={category.id}>
-                <img src={category.img} alt={category.name} style={{width: '100%', height: 300}}/>
+                <img
+                  src={category.img}
+                  alt={category.name}
+                  style={{ width: "100%", height: 300, opacity: 0.55 }}
+                />
+                <Grid
+                  sx={{
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                  }}
+                >
+                  <Grid item xs={12}>
+                    <Typography variant="subtitle1">{category.name}</Typography>
+                  </Grid>
+                </Grid>
               </SwiperSlide>
             ))}
           </Swiper>
