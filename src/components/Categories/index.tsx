@@ -1,11 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { Box, Card, Grid } from "@mui/material";
 import React from "react";
-import { Typography } from "./styles";
+import { Typography } from "../Typography";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { categories } from "../../utils/categories";
+import { useTheme } from "@themes/useTheme";
 
 export const Categories = () => {
+  const [theme] = useTheme();
   return (
     <Box mt={15} sx={{ position: "relative", textAlign: "center" }}>
       <Grid
@@ -53,7 +55,16 @@ export const Categories = () => {
                   }}
                 >
                   <Grid item xs={12}>
-                    <Typography variant="subtitle1">{category.name}</Typography>
+                    <Typography
+                      variant="subtitle1"
+                      fontSizeMd={3}
+                      fontSizeSm={2.6}
+                      fontWeight={600}
+                      color={theme.palette.text.primary}
+                      isUppercase={false}
+                      alignText="center"
+                      text={category.name}
+                    />
                   </Grid>
                 </Grid>
               </SwiperSlide>

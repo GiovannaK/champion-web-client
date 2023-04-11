@@ -7,7 +7,8 @@ export type TypographyProps = {
   color: string;
   isUppercase: boolean;
   text: string;
-  textAlign: string;
+  alignText: string;
+  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2' | 'inherit';
 };
 
 export const Typography = ({
@@ -16,16 +17,18 @@ export const Typography = ({
   fontWeight,
   isUppercase,
   fontSizeSm,
-  textAlign,
-  text
+  alignText,
+  text,
+  variant
 }: TypographyProps) => {
   return (
     <Stypography
+    variant={variant}
       color={color}
       fontSizeMd={fontSizeMd}
       fontWeight={fontWeight}
       fontSizeSm={fontSizeSm}
-      textAlign={textAlign}
+      alignText={alignText}
       isUppercase={isUppercase}
     >
       {text}
