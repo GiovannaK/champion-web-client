@@ -5,11 +5,12 @@ import { Typography } from "../Typography";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { categories } from "../../utils/categories";
 import { useTheme } from "@themes/useTheme";
+import { Image } from "./styles";
 
 export const Categories = () => {
   const [theme] = useTheme();
   return (
-    <Box mt={15} sx={{ position: "relative", textAlign: "center" }}>
+    <Box mt={5} sx={{ position: "relative", textAlign: "center" }}>
       <Grid
         container
         direction={"row"}
@@ -41,10 +42,9 @@ export const Categories = () => {
           >
             {categories.map((category) => (
               <SwiperSlide key={category.id}>
-                <img
+                <Image
                   src={category.img}
                   alt={category.name}
-                  style={{ width: "100%", height: 300, opacity: 0.55 }}
                 />
                 <Grid
                   sx={{

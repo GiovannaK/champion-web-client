@@ -8,6 +8,9 @@ export const Typography = styled(MuiTypography)<Props>`
   ${(props) => props.theme.breakpoints.up("md")} {
     font-size: ${props => props.theme.spacing(props.fontSizeMd)};
   };
+  ${(props) => props.theme.breakpoints.down("md")} {
+    font-size: ${props => props.theme.spacing(props.fontSizeMd)};
+  };
   ${(props) => props.theme.breakpoints.down("sm")} {
     font-size: ${props => props.theme.spacing(props.fontSizeSm)};
   };
