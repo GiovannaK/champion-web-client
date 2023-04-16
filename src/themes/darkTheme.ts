@@ -8,7 +8,7 @@ export const openSans = Open_Sans({
   display: "swap",
   fallback: ["Helvetica", "sans-serif"],
 });
-
+//"linear-gradient(to right, #203A43, #203A43, #0F2027);"
 const theme = createTheme({
   palette: {
     primary: {
@@ -23,7 +23,7 @@ const theme = createTheme({
       dark: "#525252",
     },
     background: {
-      default: "linear-gradient(to right, #203A43, #203A43, #0F2027);",
+      default: "linear-gradient(to right, #232526, #414345)",
       paper: "#0F2027",
     },
     error: {

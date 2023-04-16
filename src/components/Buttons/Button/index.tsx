@@ -11,6 +11,7 @@ type ButtonProps = {
   icon?: React.ReactNode;
   isEndIcon?: boolean;
   height?: string;
+  buttonColor?: { palette: string; hierarchy: string };
 };
 
 export const Button = ({
@@ -22,15 +23,16 @@ export const Button = ({
   isEndIcon,
   icon,
   height,
-  size
+  size,
+  buttonColor
 }: ButtonProps) => {
-  const buttonColor = { palette: "primary", hierarchy: "main" };
+  const color = buttonColor ? buttonColor : { palette: "primary", hierarchy: "main" };
   const iconPosition = isEndIcon ? "endIcon" : "startIcon";
   return (
     <S.Button
       buttonSize={2}
       fontWeight={fontWeight ?? 500}
-      buttonColor={buttonColor}
+      buttonColor={color}
       variant={variant}
       width={width}
       height={height}

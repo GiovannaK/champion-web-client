@@ -27,7 +27,7 @@ export const IndexPageWrapper = () => {
             fontSizeSm={2.5}
             fontWeight={900}
             isUppercase={true}
-            text="Categorias"
+            text="Seja um Champion"
             variant="h1"
           />
           <Categories />
